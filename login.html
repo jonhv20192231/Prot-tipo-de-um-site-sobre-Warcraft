@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - World Of Warcraft</title>
+    <link rel="icon" type="image/png" href="c3aab22f-d65a-4386-804b-eca6f12c57e2.png">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            color: #f3f3f3;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            border: 2px solid #ffcc00;
+        }
+        .login-container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .login-container input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+     <script>
+        function redirectToIndex() {
+            window.open('index.html', '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <img src="baixados__1_-removebg-preview.png" alt="World Of Warcraft Logo">
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button onclick="redirectToIndex()">Conecta-se</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Aqui você pode adicionar validação adicional e enviar os dados para um servidor backend
+            // Simulação de login bem-sucedido
+            if (email === "teste@exemplo.com" && password === "senha123") {
+                alert("Login bem-sucedido!");
+                // Redirecionar para outra página ou realizar outra ação
+            } else {
+                alert("Credenciais inválidas, tente novamente.");
+            }
+        });
+    </script>
+</body>
+</html>
